@@ -55,14 +55,6 @@ def prediction(model: Model = Form(...), file: UploadFile = File(...)):
     
     # Run object detection
     bbox, label, conf = cv.detect_common_objects(image, model=model)
-
-    # Clip bbox coordinates to image dimensions so cv2.rectangle/putText don't raise
-    # ValueError: Value out of range (OpenCV 4.x strict bounds enforcement)
-    h, w = image.shape[:2]
-    bbox = [
-        [max(0, x1), max(0, y1), min(w - 1, x2), min(h - 1, y2)]
-        for x1, y1, x2, y2 in bbox
-    ]
     
     # Create image that includes bounding boxes and labels
     output_image = draw_bbox(image, bbox, label, conf)
@@ -86,8 +78,6 @@ def prediction(model: Model = Form(...), file: UploadFile = File(...)):
 
 nest_asyncio.apply()
 
-# Set up for external access
 host = "localhost"
 
-# Spin up the server!    
 uvicorn.run(app, host=host, port=7000)
