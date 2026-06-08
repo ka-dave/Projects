@@ -1,6 +1,6 @@
 # MLOPS
 
-A collection of ML deployment and MLOps projects.
+A collection of production-focused machine learning deployment and MLOps projects.
 
 ## Projects
 
