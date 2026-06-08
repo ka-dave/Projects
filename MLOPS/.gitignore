@@ -1,0 +1,43 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# macOS
+.DS_Store
+
+# Backup files
+*-bkp.py
+*_bkp.py
+
+# Runtime/output directories
+images_uploaded/
+images_with_boxes/
+outputs/
+runs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.*
+
+# uv / pip
+.uv/
+*.egg-info/
+dist/
+build/

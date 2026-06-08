@@ -1,0 +1,26 @@
+# Virtual environments
+.venv/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Backup files
+*-bkp.py
+*_bkp.py
+
+# Runtime image directories
+images_uploaded/
+images_with_boxes/
+
+# uv cache
+.uv/
