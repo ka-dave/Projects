@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Vector store artifacts (for future projects)
+chroma_db/
+*.faiss
+*.index
+vectorstore/
+
+# Credentials / keys (catch-all)
+*.pem
+*.key
+secrets.json
